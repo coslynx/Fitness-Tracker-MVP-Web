@@ -1,0 +1,96 @@
+{
+  "name": "fitness-tracker-mvp",
+  "version": "1.0.0",
+  "description": "Fitness Tracker Minimum Viable Product",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coslynx/Fitness-Tracker-MVP-Web.git"
+  },
+  "author": "CosLynx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coslynx/Fitness-Tracker-MVP-Web/issues"
+  },
+  "homepage": "https://github.com/coslynx/Fitness-Tracker-MVP-Web#readme",
+  "dependencies": {
+    "@sentry/browser": "8.34.0",
+    "@sentry/nextjs": "8.34.0",
+    "@sentry/node": "8.34.0",
+    "axios": "1.7.7",
+    "chart.js": "4.4.4",
+    "next": "14.2.15",
+    "next-auth": "4.24.8",
+    "prisma": "5.20.0",
+    "react": "18.3.1",
+    "react-chartjs-2": "5.2.0",
+    "react-dom": "18.3.1",
+    "react-helmet-async": "2.0.5",
+    "react-router-dom": "6.27.0",
+    "react-toastify": "10.0.5",
+    "zustand": "5.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/react-webpack5": "^6.5.13",
+    "@types/chart.js": "^4.1.4",
+    "@types/jest": "^29.5.4",
+    "@types/node": "22.7.5",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.1",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-toastify": "^9.1.4",
+    "@types/zustand": "^4.3.5",
+    "autoprefixer": "10.4.20",
+    "babel-loader": "^9.1.2",
+    "eslint": "9.12.0",
+    "eslint-config-next": "14.2.15",
+    "jest": "^29.6.4",
+    "postcss": "8.4.47",
+    "prettier": "3.3.3",
+    "tailwindcss": "3.4.13",
+    "typescript": "5.6.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "storybook": {
+    "stories": [
+      "../src/**/*.stories.mdx",
+      "../src/**/*.stories.@(js|jsx|ts|tsx)"
+    ],
+    "addons": [
+      "@storybook/addon-links",
+      "@storybook/addon-essentials",
+      "@storybook/addon-interactions",
+      "@storybook/addon-actions"
+    ],
+    "framework": "@storybook/react",
+    "core": {
+      "builder": "@storybook/react-webpack5"
+    }
+  }
+}
