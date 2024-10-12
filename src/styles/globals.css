@@ -1,0 +1,168 @@
+/* src/styles/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa; /* Light gray background from Tailwind's gray-100 */
+  color: #333; /* Dark gray text color */
+}
+
+a {
+  color: #007bff; /* Blue link color from Tailwind's blue-500 */
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Customize the appearance of the header and footer */
+header {
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 1rem 2rem; /* Padding for visual space */
+}
+
+footer {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 1rem 2rem; /* Padding for visual space */
+  text-align: center; /* Centered text */
+}
+
+/* Create a basic grid system for content layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem; /* Padding for visual space */
+}
+
+/* Implement a loading indicator */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white overlay */
+  z-index: 10; /* Place it on top */
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #007bff; /* Blue loading color */
+    width: 50px;
+    height: 50px;
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* Styling for the modal component */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  .modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 400px;
+  }
+}
+
+/* Basic styling for the input and button components */
+.input {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 1rem;
+  &:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+}
+
+.button {
+  background-color: #007bff; /* Blue button color */
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+  }
+}
+
+/* Style for the progress bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  .progress {
+    height: 100%;
+    background-color: #007bff; /* Blue progress color */
+    border-radius: 10px;
+  }
+}
+
+/* Styling for the dashboard page */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Styling for the goal list */
+.goal-list {
+  list-style: none;
+  padding: 0;
+  .goal-item {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+}
+
+/* Styling for the activity log */
+.activity-log {
+  list-style: none;
+  padding: 0;
+  .activity-item {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+}
+
+/* Styling for the progress chart */
+.progress-chart {
+  /* Add styles for the chart container and chart elements */
+}
+
+/* Styling for the user profile */
+.user-profile {
+  /* Add styles for the profile card or section */
+}
